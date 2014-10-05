@@ -1,15 +1,16 @@
 gulp-release-tasks
 =========
 
-global release tasks for use with gulp, to make your life easier :heart:
+scoped release tasks for gulp, to make your life easier :heart:
 
 ## Usage
 `npm install gulp-release-tasks --save-dev`
 
 ```javascript
 // add to gulpfile.js
-// tasks will be registered via global context
-require('gulp-release-tasks');
+var gulp = require('gulp');
+// pass along gulp reference to have tasks imported
+require('gulp-release-tasks')(gulp);
 ```
 
 run `gulp -T` for a list of available commands
