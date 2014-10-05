@@ -4,15 +4,17 @@ gulp-release-tasks
 global release tasks for use with gulp
 
 ## Usage
-```javascript
-// npm install gulp-release-tasks --save-dev
+`npm install gulp-release-tasks --save-dev`
 
-// add this to top of your gulpfile.js
+```javascript
+// add to gulpfile.js
 // tasks will be registered via global context
 require('gulp-release-tasks');
 ```
 
 run `gulp -T` for a list of available commands
+
+bumps the versions of your `package.json` and `bower.json`
 
 ### tagging
  task             | version
@@ -22,12 +24,11 @@ run `gulp -T` for a list of available commands
  gulp tag --major | commit + tag + push v0.0.1 -> v1.0.1
 
 ### bumping
-bumps the versions of your `package.json` and `bower.json`, ignoring git conventions
- task               | version         |
- | --------------   |:---------------:|
- | gulp bump        | v0.0.1 -> v0.0.2|
- | gulp bump --minor| v0.0.1 -> v0.1.0|
- | gulp bump --major| v0.0.1 -> v1.0.1|
+ task               | version
+ | --------------   |-----------------
+ | gulp bump        | v0.0.1 -> v0.0.2
+ | gulp bump --minor| v0.0.1 -> v0.1.0
+ | gulp bump --major| v0.0.1 -> v1.0.1
 
 ## Contributing
 
