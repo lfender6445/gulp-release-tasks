@@ -3,7 +3,7 @@
   "description": "",
   "author": "",
   "repository": "https://github.com/lfender6445/gulp-release-tasks",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "loader.js",
   "dependencies": {
     "gulp": "^3.8.6",
