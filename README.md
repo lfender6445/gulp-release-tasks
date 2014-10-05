@@ -1,7 +1,7 @@
 gulp-release-tasks
 =========
 
-global release tasks for use with gulp, to make your life easier :beer:
+global release tasks for use with gulp, to make your life easier :heart:
 
 ## Usage
 `npm install gulp-release-tasks --save-dev`
@@ -30,12 +30,14 @@ gulp bump        | v0.0.1 -> v0.0.2
 gulp bump --minor| v0.0.1 -> v0.1.0
 gulp bump --major| v0.0.1 -> v1.0.1
 
-### optional flags
-- in some cases, you may want to limit versioning to a single file
-  - `gulp tag --bower` will ignore your package.json, and only augment the version for your `bower.json`
-  - `gulp tag --npm`   will ignore your bower.json, and only augment the version for your `package.json`
-
-
+### flags
+limit versioning to single file
+- `gulp tag --bower`
+  - only apply versioning for `bower.json`
+- `gulp tag --npm`
+  - only apply versioning for `package.json`
+- `gulp tag --npm --major`
+  - v0.0.1 -> v1.0.1 applied only to `package.json`
 
 ## Contributing
 
@@ -44,5 +46,7 @@ gulp bump --major| v0.0.1 -> v1.0.1
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+---
 
 ![x](http://i.imgur.com/ydTgw5e.gif)
