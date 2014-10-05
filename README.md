@@ -3,6 +3,8 @@ gulp-release-tasks
 
 global release tasks for use with gulp
 
+![x](http://i.imgur.com/ydTgw5e.gif)
+
 ## Usage
 `npm install gulp-release-tasks --save-dev`
 
