@@ -31,7 +31,7 @@ gulp bump --minor| v0.0.1 -> v0.1.0
 gulp bump --major| v0.0.1 -> v1.0.1
 
 #### flags
-limit versioning to single config
+limit versioning to single config instead of both
 - `gulp tag --bower`
   - applies versioning to `bower.json`
 - `gulp tag --npm`
