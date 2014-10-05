@@ -1,5 +1,3 @@
-var fs = require('fs');
-path = __dirname + '/tasks/gulpfile.js';
-file =  fs.readFileSync(path);
-eval(file.toString())
-
+module.exports = function(gulp){
+  require(__dirname + '/tasks/release-tasks.js')(gulp)
+};
