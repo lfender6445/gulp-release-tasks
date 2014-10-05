@@ -30,6 +30,13 @@ gulp bump        | v0.0.1 -> v0.0.2
 gulp bump --minor| v0.0.1 -> v0.1.0
 gulp bump --major| v0.0.1 -> v1.0.1
 
+### optional flags
+- in some cases, you may want to limit versioning to a single file
+  - `gulp tag --bower` will ignore your package.json, and only augment the version for your `bower.json`
+  - `gulp tag --npm`   will ignore your bower.json, and only augment the version for your `package.json`
+
+
+
 ## Contributing
 
 1. Fork it

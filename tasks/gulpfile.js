@@ -8,14 +8,28 @@ filter = require('gulp-filter');
 tag_version = require('gulp-tag-version');
 argv = require('yargs').argv;
 
-paths = {
-  scripts: ['dist/*.js'],
-  versionsToBump: ['./package.json', './bower.json'],
-  version: 'bower.json',
-  dest: '.'
+var versioningFiles = function(){
+  if(argv.bower){
+    return ['./bower.json']
+  }
+  if(argv.npm || argv.node){
+    return ['./package.json']
+  }
+  if(fs.existsSync('package.json') && fs.existsSync('bower.json')){
+    return ['./package.json', './bower.json']
+  } else {
+    return ['./package.json']
+  }
 };
 
-gulp.task 'release', ['tag'] -> // alias for tag
+var bumpPreference = fs.existsSync('package.json')  ? 'package.json' : 'bower.json';
+var vFiles         = versioningFiles();
+
+paths = {
+  versionsToBump: vFiles,
+  version: bumpPreference,
+  dest: '.'
+};
 
 gulp.task('tag', ['bump', 'commit'], function() {
   return gulp.src(paths.versionsToBump).pipe(filter(paths.version)).pipe(tag_version()).pipe(git.push('origin', 'master', {
@@ -52,4 +66,5 @@ gulp.task('bump', function() {
     type: versioning()
   })).pipe(gulp.dest(paths.dest));
 });
+
 
