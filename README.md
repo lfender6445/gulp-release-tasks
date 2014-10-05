@@ -17,18 +17,18 @@ run `gulp -T` for a list of available commands
 bumps the versions of your `package.json` and `bower.json`
 
 ### tagging
- task             | version
- -----------------|-------------------------------------
- gulp tag         | commit + tag + push v0.0.1 -> v0.0.2
- gulp tag --minor | commit + tag + push v0.0.1 -> v0.1.0
- gulp tag --major | commit + tag + push v0.0.1 -> v1.0.1
+task             | version
+-----------------|-------------------------------------
+gulp tag         | commit + tag + push v0.0.1 -> v0.0.2
+gulp tag --minor | commit + tag + push v0.0.1 -> v0.1.0
+gulp tag --major | commit + tag + push v0.0.1 -> v1.0.1
 
 ### bumping
- task               | version
- | --------------   |-----------------
- | gulp bump        | v0.0.1 -> v0.0.2
- | gulp bump --minor| v0.0.1 -> v0.1.0
- | gulp bump --major| v0.0.1 -> v1.0.1
+task             | version
+--------------   |-----------------
+gulp bump        | v0.0.1 -> v0.0.2
+gulp bump --minor| v0.0.1 -> v0.1.0
+gulp bump --major| v0.0.1 -> v1.0.1
 
 ## Contributing
 
