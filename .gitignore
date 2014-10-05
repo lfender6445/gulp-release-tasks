@@ -1,0 +1,15 @@
+.dump
+.DS_Store
+.bundle
+.ruby-gemset
+.envrc
+*.orig
+*.map
+*~
+bin/
+doc/
+tmp
+*.swp
+*.swo
+npm-debug.log
+node_modules
