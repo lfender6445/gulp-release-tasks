@@ -19,9 +19,9 @@ bumps the versions of your `package.json` and `bower.json`
 ### tagging
 task             | version
 -----------------|-------------------------------------
-gulp tag         | commit + tag + push v0.0.1 -> v0.0.2
-gulp tag --minor | commit + tag + push v0.0.1 -> v0.1.0
-gulp tag --major | commit + tag + push v0.0.1 -> v1.0.1
+gulp tag         | v0.0.1 -> v0.0.2 + commit + tag + push
+gulp tag --minor | v0.0.1 -> v0.1.0 + commit + tag + push
+gulp tag --major | v0.0.1 -> v1.0.1 + commit + tag + push
 
 ### bumping
 task             | version
