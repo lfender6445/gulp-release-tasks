@@ -4,7 +4,7 @@ gulp-release-tasks
 global release tasks for use with gulp
 
 ## Usage
-``javascript
+```javascript
 // npm install gulp-release-tasks --save-dev
 
 // add this to top of your gulpfile.js
