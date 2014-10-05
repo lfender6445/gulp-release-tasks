@@ -1,9 +1,7 @@
 gulp-release-tasks
 =========
 
-global release tasks for use with gulp
-
-![x](http://i.imgur.com/ydTgw5e.gif)
+global release tasks for use with gulp, to make your life easier :beer:
 
 ## Usage
 `npm install gulp-release-tasks --save-dev`
@@ -39,3 +37,5 @@ gulp bump --major| v0.0.1 -> v1.0.1
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+![x](http://i.imgur.com/ydTgw5e.gif)
