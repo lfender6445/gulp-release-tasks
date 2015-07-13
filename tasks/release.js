@@ -1,5 +1,5 @@
-module.exports = function(gulp){
-  var argv, bump, filter, fs, git, paths, prompt, tag_version, versioning;
+module.exports = function(gulp, options){
+  var argv, bump, filter, fs, git, paths, prompt, tag_version, versioning, tagPrefix;
 
   fs = require('fs');
   prompt = require('gulp-prompt');
@@ -8,6 +8,13 @@ module.exports = function(gulp){
   filter = require('gulp-filter');
   tag_version = require('gulp-tag-version');
   argv = require('yargs').argv;
+  
+  console.log(options);
+
+  options = options || {};
+  tagPrefix = typeof(options.tagPrefix) === 'undefined' ? 'v' : options.tagPrefix;
+  
+  console.log(tagPrefix);
 
   var versioningFiles = function(){
     if(argv.bower){
@@ -33,7 +40,7 @@ module.exports = function(gulp){
   };
 
   gulp.task('tag', ['bump', 'commit'], function() {
-    return gulp.src(paths.versionsToBump).pipe(filter(paths.version)).pipe(tag_version()).pipe(git.push('origin', 'master', {
+    return gulp.src(paths.versionsToBump).pipe(filter(paths.version)).pipe(tag_version({prefix: tagPrefix})).pipe(git.push('origin', 'master', {
       args: '--tags'
     }));
   });
