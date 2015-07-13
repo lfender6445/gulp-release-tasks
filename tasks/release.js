@@ -11,6 +11,8 @@ module.exports = function(gulp, options){
   
   options = options || {};
   tagPrefix = options.tagPrefix || 'v';
+  
+  console.log(tagPrefix);
 
   var versioningFiles = function(){
     if(argv.bower){
