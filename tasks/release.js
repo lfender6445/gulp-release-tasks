@@ -12,7 +12,7 @@ module.exports = function(gulp, options){
   console.log(options);
 
   options = options || {};
-  tagPrefix = options.tagPrefix || 'v';
+  tagPrefix = typeof(options.tagPrefix) === 'undefined' ? 'v' : options.tagPrefix;
   
   console.log(tagPrefix);
 
