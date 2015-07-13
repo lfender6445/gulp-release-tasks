@@ -16,11 +16,14 @@ module.exports = function(gulp){
     if(argv.npm || argv.node){
       return ['./package.json']
     }
-    if(fs.existsSync('package.json') && fs.existsSync('bower.json')){
-      return ['./package.json', './bower.json']
-    } else {
-      return ['./package.json']
-    }
+
+    var ret = [];
+    ['./package.json', './bower.json', './manifest.json'].forEach(function(path) {
+      if (fs.existsSync(path)) {
+        ret.push(path);
+      }
+    });
+    return ret;
   };
 
   var bumpPreference = fs.existsSync('package.json')  ? 'package.json' : 'bower.json';
