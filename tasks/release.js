@@ -9,6 +9,8 @@ module.exports = function(gulp, options){
   tag_version = require('gulp-tag-version');
   argv = require('yargs').argv;
   
+  console.log(options);
+
   options = options || {};
   tagPrefix = options.tagPrefix || 'v';
   
